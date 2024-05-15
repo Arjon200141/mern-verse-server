@@ -49,6 +49,7 @@ async function run() {
         query = { UserEmail: req.query.UserEmail }
       }
       const result = await bookingCollection.find(query).toArray();
+      console.log(result);
       res.send(result);
     })
 
